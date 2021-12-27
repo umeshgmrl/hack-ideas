@@ -74,7 +74,8 @@ const Dashboard = () => {
                                 <span className="upvote" onClick={() => upvoteChallenge(chanllenge.id, chanllenge.votes + 1)}>👍🏽</span>
                             </span>
                             <p>{chanllenge.description}</p>
-                            <div className="tags">
+                            <div className="tags-container">
+                                <span>tags: </span>
                                 {chanllenge.tags.map((tag, keyId) => {
                                     return <span key={keyId} className="tag is-success">{tag}</span>
                                 })}

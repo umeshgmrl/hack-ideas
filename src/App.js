@@ -17,6 +17,7 @@ export function App() {
     const logoutUser = useStore(state => state.logoutUser);
     // const getChallenges = useStore(state => state.getChallenges);
     const loggedIn = useStore(state => state.user.loggedIn);
+    console.log(1, loggedIn)
     return (
         <div className="container">
             <BrowserRouter>

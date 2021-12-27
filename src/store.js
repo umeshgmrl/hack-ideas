@@ -1,19 +1,20 @@
 import create from 'zustand';
 import { supabase } from "./supabaseClient";
 
-const initialuser = {
-    loggedIn: false
-}
+const initialuser = () => ({
+    loggedIn: localStorage.getItem("loggedIn") || false
+})
 
 const useStore = create((set, get) => ({
     challenges: [],
-    user: initialuser,
+    user: initialuser(),
     loadingItems: [],
     loginUser: () => {
         const loadingItems = [...get().loadingItems];
         loadingItems.push("login");
         set({ loadingItems });
         setTimeout(() => {
+            localStorage.setItem("loggedIn", true);
             set({
                 user: {
                     loggedIn: true
@@ -24,7 +25,8 @@ const useStore = create((set, get) => ({
     },
 
     logoutUser: () => {
-        set({ user: initialuser, challenges: [] });
+        localStorage.setItem("loggedIn", "");
+        set({ user: initialuser(), challenges: [] });
     },
 
     addChallenge: async (challenge, navigate) => {

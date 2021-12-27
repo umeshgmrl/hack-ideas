@@ -14,6 +14,11 @@
 }
 .upvote {
     cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+.upvote:hover {
+    background-color: aliceblue;
 }
 .challenge .votes {
     position: absolute;
@@ -29,8 +34,8 @@
 }
 h1 {
     font-size: 30px;
-    /* text-decoration: underline; */
     display: inline-block;
+    margin-bottom: 30px;
 }
 h2 {
     font-size: 24px;
@@ -42,15 +47,17 @@ header {
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.tags {
+.tags-container {
     margin-top: 10px;
 }
-.tags .tag{
+.tags-container .tag{
     margin-left: 5px;
 }
 .dashboard-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
 }
 
 .loading-container button {
@@ -62,3 +69,9 @@ header {
     font-weight: 400;
     color: #888;
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+      margin: 0px 15px;
+    }
+  }
