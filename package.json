@@ -2,10 +2,11 @@
   "name": "entropic-hack-ideas",
   "version": "1.0.0",
   "description": "Internal challange management app",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "build": "parcel build"
   },
   "author": "Bhumesh Domala",
   "license": "ISC",
@@ -13,7 +14,10 @@
     "parcel": "^2.0.1"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^1.29.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1",
+    "zustand": "^3.6.8"
   }
 }

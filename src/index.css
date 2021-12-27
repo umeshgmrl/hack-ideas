@@ -1,0 +1,64 @@
+.login-container {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.challenge {
+    position: relative;
+}
+.upvote {
+    cursor: pointer;
+}
+.challenge .votes {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.sort-container {
+    display: flex;
+    align-items: center;
+}
+.container {
+    max-width: 1000px !important;
+}
+h1 {
+    font-size: 30px;
+    /* text-decoration: underline; */
+    display: inline-block;
+}
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.tags {
+    margin-top: 10px;
+}
+.tags .tag{
+    margin-left: 5px;
+}
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.loading-container button {
+    border: none;
+}
+.multi-select-help-text {
+    font-size: 10px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+}
